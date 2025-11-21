@@ -257,7 +257,7 @@ class ChecksConfig(BaseModel):
     cppcheck: "CppCheckConfig" = Field(..., alias="cppcheck")
     clang_format: "CheckConfig" = Field(..., alias="clang-format")
     clang_tidy: "CheckConfig" = Field(..., alias="clang-tidy")
-    cyclomatic: "CheckConfig"
+    cyclomatic: "CyclomaticCheckConfig"
     license: Optional[LicenseCheckConfig] = None
 
 
@@ -284,6 +284,9 @@ class CppCheckConfig(BaseModel):
     suppress: List[str] = []
     directories: List[str] = []
 
+
+class CyclomaticCheckConfig(CheckConfig):
+    complexity: Optional[int] = 25
 
 class DocConfig(BaseModel):
     exclude: List[str] = Field(default_factory=list)
