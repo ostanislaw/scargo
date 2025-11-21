@@ -379,7 +379,7 @@ class CyclomaticChecker(CheckerFixer):
         """
         Run lizard with the configured parameters and collect all cyclomatic complexity issues.
         """
-        cmd = ["lizard", str(self._config.source_dir_path), "-C", "25", "-w"]
+        cmd = ["lizard", str(self._config.source_dir_path), "-C", "15", "-w"]
 
         for exclude_pattern in self.get_exclude_patterns():
             cmd.extend(["-x", exclude_pattern])
