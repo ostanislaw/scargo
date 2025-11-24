@@ -288,6 +288,7 @@ class CppCheckConfig(BaseModel):
 class CyclomaticCheckConfig(CheckConfig):
     complexity: Optional[int] = 25
 
+
 class DocConfig(BaseModel):
     exclude: List[str] = Field(default_factory=list)
 
