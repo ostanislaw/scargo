@@ -52,7 +52,8 @@ class _ScargoGenDoc:
             key = line.split(" ", 1)[0]
             if key in doxy_values:
                 yield f"{key.ljust(23)}= {doxy_values[key]}\n"
-            yield line
+            else:
+                yield line
 
     def generate_doxygen(self) -> None:
         """Generate doxygen according to doxyfile"""
