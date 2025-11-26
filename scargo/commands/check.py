@@ -10,7 +10,7 @@ from itertools import chain
 from pathlib import Path
 from typing import Iterable, List, NamedTuple, Optional, Sequence, Type
 
-from scargo.config import CheckConfig, Config, TodoCheckConfig, CyclomaticCheckConfig
+from scargo.config import CheckConfig, Config, CyclomaticCheckConfig, TodoCheckConfig
 from scargo.config_utils import prepare_config
 from scargo.logger import get_logger
 from scargo.utils.clang_utils import get_comment_lines
