@@ -46,7 +46,7 @@ class _ScargoGenDoc:
             "INPUT": project_path,
             "RECURSIVE": "YES",
             "EXCLUDE_PATTERNS": exclude,
-            "GENERATE_LATEX": "NO",
+            "GENERATE_LATEX": "YES",
         }
         for line in lines:
             key = line.split(" ", 1)[0]
