@@ -204,6 +204,18 @@ class Target(BaseModel):
         bin_dir = self.get_bin_dir_path(profile)
         return f"{bin_dir}/{bin_name}{self.elf_file_extension}"
 
+    def is_x86(self) -> bool:
+        return "x86" == self.id
+
+    def is_stm32(self) -> bool:
+        return "stm32" == self.id
+
+    def is_esp32(self) -> bool:
+        return "esp32" == self.id
+
+    def is_atsam(self) -> bool:
+        return "atsam" == self.id
+
     @classmethod
     def get_target_by_id(cls, target_id: str) -> "Target":
         return TARGETS[target_id]
